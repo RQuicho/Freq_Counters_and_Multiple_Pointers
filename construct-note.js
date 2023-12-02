@@ -8,6 +8,7 @@
 // constructNote('aabbcc', 'bcabcaddff') // true
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+// use frequency counter method
 
 // create an object that stores the count of each letter
 // createFreqCounter('abc') // {a: 1, b: 1, c: 1}
@@ -27,7 +28,7 @@ const constructNote = (str1, str2) => {
   console.log('str1Freq: ', str1Freq);
   console.log('str2Freq: ', str2Freq);
 
-  // if letters in str1 are present in str2, and count of each letter is same as count in str 2, return true
+  // if letters in str1 are present in str2, and count of each letter is <= count in str 2, return true
   // else return false
   for (let key in str1Freq) {
     if (!str2Freq[key]) return false;
